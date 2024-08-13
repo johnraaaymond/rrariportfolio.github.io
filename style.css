@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+}
+
+.left, .right {
+    padding: 20px 0px 20px 0px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+.full-height-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.full-height-card {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background: #080402;
+    color: #eee;
+    opacity: 0.9;
+    margin-bottom: 10px; /* Space between card and name */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-height-card:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.name-container {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 24px;
+    border-radius: 10px; /* Matches the card's style */
+}
+
+
+.card-1 {
+    height: 48%;
+    background: #080402;
+    color: #eee;
+    opacity: 0.9;
+    /* Add any specific styles for card 1 here */
+}
+
+.card-1:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px; /* Ensures video respects the card's border-radius */
+}
+
+
+.card-2 {
+    height: 48%;
+    max-width: 100%;
+    width: 90%;
+    background: #080402;
+    color: #eee;
+    opacity: 0.9;   
+    /* Add any specific styles for card 2 here */
+}
+
+/* Icon container for card-2 */
+.icon-container {
+    position: absolute;
+    top: 50%;
+    right: -50px; /* Positioning icons slightly outside card */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Icon styles */
+.icon-container a {
+    color: #fff;
+    background-color: #080402;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Hover effect for FontAwesome icons */
+.icon-container a:hover {
+    transform: scale(1.2);
+    background-color: #800000; /* Maroon color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .left, .right {
+        flex: 100%;
+    }
+
+    .full-height-card {
+        height: 100%;
+        margin-bottom: 20px;
+        max-width: 100%;
+        width: 95%;
+    }
+
+    .right {
+        flex-direction: row;
+    }
+
+    .card-1, .card-2 {
+        height: auto;
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .icon-container {
+        right: -30px; /* Adjust position for smaller screens */
+    }
+}
